@@ -1,12 +1,12 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "Stock - Save sequence on validation",
+    'name': "Add route to sale order",
 
     'summary': """
-        Save sequence on validation of stock picking instead of on save""",
+        Allows to pick route on sale order""",
 
     'description': """
-        Save sequence on validation of stock picking instead of on save
+         Allows to pick route on sale order
     """,
 
     'author': "My Company",
@@ -19,5 +19,8 @@
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['stock'],
+    'depends': ['sale_stock','sale'],
+    'data':[
+        'views/sale_order_views.xml'
+    ]
 }

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <!-- Heredamos la vista de orden de venta -->
+        <record id="view_order_form_inherit_route" model="ir.ui.view">
+            <field name="name">sale.order.form.inherit.route</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale.view_order_form"/>
+            <field name="arch" type="xml">
+                <!-- Insertamos el campo route_id debajo de partner_id -->
+                <xpath expr="//field[@name='payment_term_id']" position="after">
+                    <field name="route_id"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>
